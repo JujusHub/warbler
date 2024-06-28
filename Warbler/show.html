@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>{{ user.username }}'s Profile</h2>
+  <p>{{ user.bio }}</p>
+  <p>{{ user.location }}</p>
+  <p>Liked Warbles: <a href="{{ url_for('liked_warbles', user_id=user.id) }}">{{ user.likes | length }}</a></p>
+{% endblock %}
